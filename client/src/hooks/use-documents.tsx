@@ -15,7 +15,6 @@ const useDocuments = () => {
 
     try {
       const response = await DocumentService.list(accessToken);
-      console.log(response.data.data)
       setDocuments(response.data.data as Array<DocumentInterface>);
     } catch (err) {
       error('Unable to load documents. Please try again.');

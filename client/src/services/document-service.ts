@@ -21,8 +21,13 @@ const DocumentService = {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },
+  listId: (accessToken: string, documentId: number) => {
+    return API.get(`document/${documentId}/identifiers`, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
   update: (accessToken: string, payload: DocumentInterface) => {
-    return API.put(`document/${payload.id}`, payload, {
+    return API.put(`document/${payload.ID}`, payload, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   },

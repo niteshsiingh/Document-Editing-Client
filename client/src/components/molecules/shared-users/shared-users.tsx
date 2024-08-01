@@ -24,7 +24,6 @@ const SharedUsers = ({ documentUsers, setDocument }: SharedUsersProps) => {
     documentId: number;
     userId: number;
   }) => {
-    console.log("at; ",accessToken);
     if (!accessToken) return;
 
     setLoading(true);

@@ -19,7 +19,7 @@ const CreateDocumentButton = () => {
     setLoading(true);
     try {
       const response = await DocumentService.create(accessToken);
-      const { id } = response.data.data as DocumentInterface;
+      const { id } = response.data.data;
       navigate(`/document/${id}`);
     } catch (err) {
       error('Unable to create a new document. Please try again.');

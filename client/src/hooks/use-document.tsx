@@ -11,6 +11,7 @@ const useDocument = (documentId: number) => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Array<string>>([]);
   const [document, setDocument] = useState<null | DocumentInterface>(null);
+  // const [intialContent, setInitialContent] = useState("");
 
   const loadDocument = async (accessToken: string, documentId: number) => {
     setLoading(true);

@@ -1,14 +1,15 @@
 import DocumentUser from './document-user';
 
 interface DocumentInterface {
-  id: number;
-  title: string;
+  ID: number;
+  Title: string;
   content: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-  userId: number;
+  CreatedAt: Date;
+  UpdatedAt: Date;
+  DeletedAt: Date;
+  UserID: number;
   users: Array<DocumentUser>;
-  isPublic: boolean;
+  IsPublic: boolean;
 }
 
 export default DocumentInterface;

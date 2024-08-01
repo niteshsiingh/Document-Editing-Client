@@ -20,14 +20,14 @@ const DocumentsList = ({
           {documents
             .sort((a, b) => {
               return (
-                new Date(b.updatedAt).getTime() -
-                new Date(a.updatedAt).getTime()
+                new Date(b.UpdatedAt).getTime() -
+                new Date(a.UpdatedAt).getTime()
               );
             })
             .map((document) => {
               return (
                 <DocumentCard
-                  key={document.id}
+                  key={document.ID}
                   document={document}
                   setDocuments={setDocuments}
                 />

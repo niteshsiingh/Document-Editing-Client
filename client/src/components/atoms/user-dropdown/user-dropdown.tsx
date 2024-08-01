@@ -18,7 +18,6 @@ const UserDropdown = () => {
     success('Successfully logged out!');
     navigate('/login');
   };
-  console.log("email: ",email);
   return (
     <div className="relative" onBlur={() => setShowDropdown(false)}>
       <button

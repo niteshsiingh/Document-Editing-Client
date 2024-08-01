@@ -49,7 +49,6 @@ const Login = () => {
       login(newAccessToken, newRefreshToken);
       success('Successfully logged in!');
       navigate('/document/create');
-      console.log('Successfully logged in!');
     } catch (err) {
       if (axios.isAxiosError(err)) {
         const { response } = err as AxiosError;

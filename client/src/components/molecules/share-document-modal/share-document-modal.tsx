@@ -37,7 +37,7 @@ const ShareDocumentModal = () => {
       return;
 
     const payload = {
-      documentId: document.id,
+      documentId: document.ID,
       email: email,
       permission: PermissionEnum.EDIT,
     };
@@ -56,7 +56,6 @@ const ShareDocumentModal = () => {
       } as DocumentInterface);
       setEmail('');
     } catch (err) {
-      console.log(err);
       error(`Unable to share this document with ${email}. Please try again`);
     } finally {
       setLoading(false);
@@ -99,6 +98,7 @@ const ShareDocumentModal = () => {
     (document !== null &&
       document.users?.filter((documentUser) => documentUser.user.email === email)
         .length > 0);
+  // const alreadyShared = false;
 
   const restrictedAccessBtn = (
     <div className="space-y-1">
@@ -217,7 +217,7 @@ const ShareDocumentModal = () => {
               <div>
                 <div className="flex justify-between items-center">
                   <div className="space-y-1">
-                    {document.isPublic ? publicAccessBtn : restrictedAccessBtn}
+                    {document.IsPublic ? publicAccessBtn : restrictedAccessBtn}
                   </div>
                   <input
                     ref={copyLinkInputRef}

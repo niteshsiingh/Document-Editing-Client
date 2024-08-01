@@ -12,14 +12,12 @@ const Create = () => {
   const { documents, loading, setDocuments } = useDocuments();
   const recentDocuments =
       Array.isArray(documents) && documents !== null
-        ? documents.filter((document) => document.userId === userId)
+        ? documents.filter((document) => document.UserID === userId)
         : [];
     const sharedDocuments =
       Array.isArray(documents) && documents !== null
-        ? documents.filter((document) => document.userId !== userId)
+        ? documents.filter((document) => document.UserID !== userId)
         : [];
-  console.log("1: ",recentDocuments);
-  console.log("2: ",sharedDocuments);
   return (
     <div style={{ height: heightStr }}>
       <DocumentCreateHeader />

@@ -59,8 +59,8 @@ import {
     const [saving, setSaving] = useState(defaultValues.saving);
     const [currentUsers, setCurrentUsers] = useState(defaultValues.currentUsers);
   
-    const setDocumentTitle = (title: string) => {
-      setDocument({ ...document, title } as DocumentInterface);
+    const setDocumentTitle = (Title: string) => {
+      setDocument({ ...document, Title } as DocumentInterface);
     };
   
     const saveDocument = async (updatedDocument: DocumentInterface) => {

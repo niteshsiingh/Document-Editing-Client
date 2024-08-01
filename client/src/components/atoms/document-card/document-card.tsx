@@ -12,7 +12,6 @@ interface DocumentCardProps {
 const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
   const { userId } = useAuth();
   const navigate = useNavigate();
-
   const handleDocumentBtnClick = (
     event: MouseEvent<HTMLDivElement>,
     documentId: number
@@ -43,8 +42,8 @@ const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
 
   return (
     <div
-      onClick={(event) => handleDocumentBtnClick(event, document.id)}
-      key={document.id}
+      onClick={(event) => handleDocumentBtnClick(event, document.ID)}
+      key={document.ID}
       className="text-left cursor-pointer"
     >
       <div className="h-80 w-full border flex flex-col justify-between hover:border-blue-500 rounded">
@@ -52,7 +51,7 @@ const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
           {skeleton}
         </div>
         <div className="w-full h-24 border-t p-3">
-          <h6 className="text-sm max-w-full truncate">{document.title}</h6>
+          <h6 className="text-sm max-w-full truncate">{document.Title}</h6>
           <div className="flex items-center justify-between">
             <div className="relative flex items-center">
               <svg
@@ -70,16 +69,16 @@ const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
                 />
               </svg>
               <p className="text-xs text-gray-400 relative right-2">
-                {new Date(document.updatedAt).toLocaleDateString('en-US', {
+                {new Date(document.UpdatedAt).toLocaleDateString('en-US', {
                   month: 'short',
                   day: 'numeric',
                   year: 'numeric',
                 })}
               </p>
             </div>
-            {document.userId === userId && (
+            {document.UserID === userId && (
               <DocumentMenuButton
-                documentId={document.id}
+                documentId={document.ID}
                 setDocuments={setDocuments}
               />
             )}

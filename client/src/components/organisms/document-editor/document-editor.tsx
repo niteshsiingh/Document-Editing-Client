@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { EditorContext } from '../../../contexts/editor-context';
 
 const DocumentEditor = () => {
-  const { editorState, editorRef, handleEditorChange, focusEditor } =
+  const { editorState, editorRef,onChange,handleKeyCommand, focusEditor } =
     useContext(EditorContext);
 
   return (
@@ -14,8 +14,11 @@ const DocumentEditor = () => {
     >
       <Editor
         ref={editorRef}
+        // editorState={editorState}
+        // onChange={handleEditorChange}
         editorState={editorState}
-        onChange={handleEditorChange}
+        onChange={onChange}
+        handleKeyCommand={handleKeyCommand}
       />
     </div>
   );

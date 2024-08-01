@@ -36,7 +36,6 @@ const useAuth = () => {
   };
 
   const refreshAccessToken = async () => {
-    console.log("refreshAccessToken ", refreshToken)
     if (refreshToken === null) {
       destroyAuth();
       setLoadingAuth(false);
@@ -55,7 +54,6 @@ const useAuth = () => {
   };
 
   const logout = async () => {
-    console.log("logout")
     if (!accessToken) return;
     try {
       await AuthService.logout(accessToken);
@@ -81,7 +79,7 @@ const useAuth = () => {
     // setEmail(null);
     // setIsAuthenticated(false);
   };
-  console.log("destroyAuth")
+  // console.log("destroyAuth")
   return {
     accessToken,
     isAuthenticated,

@@ -41,7 +41,6 @@ const DocumentMenuBar = () => {
     setSaving,
     setErrors,
   } = useContext(DocumentContext);
-
   const handleTitleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const title = event.target.value;
     setDocumentTitle(title);
@@ -67,9 +66,6 @@ const DocumentMenuBar = () => {
       setSaving(false);
     }
   };
-  console.log("document: ",document);
-  console.log("userId: ",userId);
-  console.log(document?.userId);
   return (
     <div className="w-full flex justify-between items-center px-3 pb-1 border-b">
       {/* Left */}
@@ -81,7 +77,7 @@ const DocumentMenuBar = () => {
             type="text"
             onBlur={(event) => handleTitleInputBlur(event)}
             onChange={(event) => handleTitleInputChange(event)}
-            value={document?.title ? document?.title : ''}
+            value={document?.Title ? document?.Title : ''}
             className="font-medium text-lg px-2 pt-2"
             name=""
             id=""
@@ -118,7 +114,7 @@ const DocumentMenuBar = () => {
       </div>
       {/* Right */}
       <div className="flex items-center flex-shrink-0 pl-3 gap-x-4">
-        {document !== null && document.userId === userId && (
+        {document !== null && document.UserID === userId && (
           <ShareDocumentModal />
         )}
         <div className="flex items-center gap-x-2">

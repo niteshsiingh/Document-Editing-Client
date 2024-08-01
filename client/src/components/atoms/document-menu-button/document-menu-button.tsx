@@ -36,7 +36,7 @@ const DocumentMenuButton = ({
     try {
       await DocumentService.delete(accessToken, documentId);
       setDocuments((allDocuments: Array<DocumentInterface>) =>
-        allDocuments.filter((document) => document.id !== documentId)
+        allDocuments.filter((document) => document.ID !== documentId)
       );
     } catch (err) {
       error('Unable to delete document. Please try again.');

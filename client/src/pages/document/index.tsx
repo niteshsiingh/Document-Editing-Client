@@ -13,15 +13,6 @@ const Document = () => {
   const documentViewerHeight = `calc(${heightStr} - ${documentHeaderRef.current?.clientHeight}px)`;
   const { setDocument } = useContext(DocumentContext);
   const { document, loading } = useDocument(parseInt(documentId as string));
-
-  console.log("Document: ",document);
-  console.log("Loading: ",loading);
-  console.log("DocumentId: ",documentId);
-  console.log("DocumentHeaderRef: ",documentHeaderRef);
-  console.log("DocumentViewerHeight: ",documentViewerHeight);
-  console.log("SetDocument: ",setDocument);
-  console.log("HeightStr: ",heightStr);
-  console.log("WidthStr: ",widthStr);
   
   useEffect(() => {
     if (document !== null) setDocument(document);

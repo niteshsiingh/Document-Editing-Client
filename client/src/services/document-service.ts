@@ -1,0 +1,41 @@
+import DocumentInterface from '../types/interfaces/document';
+import API from './api';
+
+const DocumentService = {
+  create: (accessToken: string) => {
+    return API.post(
+      'document',
+      {},
+      {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      }
+    );
+  },
+  get: (accessToken: string, documentId: number) => {
+    return API.get(`document/${documentId}`, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
+  list: (accessToken: string) => {
+    return API.get('document', {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
+  listId: (accessToken: string, documentId: number) => {
+    return API.get(`document/${documentId}/identifiers`, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
+  update: (accessToken: string, payload: DocumentInterface) => {
+    return API.put(`document/${payload.ID}`, payload, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
+  delete: (accessToken: string, documentId: number) => {
+    return API.delete(`document/${documentId}`, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+  },
+};
+
+export default DocumentService;

@@ -34,7 +34,7 @@ Document-Editing-CLient is a collaborative document editing application that mim
 
 ## Acknowledgements
 
-The initial frontend repository is based on [Noah's Google Docs Clone](https://github.com/noahskorner/google-docs-clone). I have modified the necessary files to meet my requirements, such as removing WebSockets for sharing documents and instead using CRDTs. Thank you, @noahskorner , for the great starting point!
+The initial frontend repository is based on [Noah's Google Docs Clone](https://github.com/noahskorner/google-docs-clone). I have modified the necessary files to meet my requirements, such as removing WebSockets for sharing documents and instead using CRDTs. Thank you, @[Noah Korner](https://github.com/noahskorner), for the great starting point!
 
 ## Contact
 

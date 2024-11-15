@@ -31,7 +31,7 @@ const Toast = ({ id, color, title, body, actions }: ToastInterface) => {
             return (
               <button
                 key={index}
-                className="text-blue-500 font-semibold hover:underline text-center pr-2 action"
+                className="text-[#008000] font-semibold hover:underline text-center pr-2 action"
                 onClick={() => a.action()}
               >
                 {a.label}

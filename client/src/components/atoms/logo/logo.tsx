@@ -9,7 +9,7 @@ const Logo = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-12 w-12 text-white"
-        fill="#3b82f6"
+        fill="#008000"
         viewBox="0 0 24 24"
         stroke="currentColor"
         strokeWidth="1"

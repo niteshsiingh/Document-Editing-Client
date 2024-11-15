@@ -105,7 +105,7 @@ const ShareDocumentModal = () => {
       <button
         disabled={saving}
         onClick={() => updateIsPublic(true)}
-        className="font-semibold text-blue-600 p-2 hover:bg-blue-50 rounded-md"
+        className="font-semibold text-[#008000] p-2 hover:bg-[#008000] rounded-md"
       >
         {saving && <Spinner size="sm" />}
         <span className={`${saving && 'opacity-0'}`}>
@@ -126,7 +126,7 @@ const ShareDocumentModal = () => {
       <button
         disabled={saving}
         onClick={() => updateIsPublic(false)}
-        className="font-semibold text-blue-600 p-2 hover:bg-blue-50 rounded-md"
+        className="font-semibold text-[#008000] p-2 hover:bg-[#008000] rounded-md"
       >
         {saving && <Spinner size="sm" />}
         <span className={`${saving && 'opacity-0'}`}>
@@ -169,7 +169,7 @@ const ShareDocumentModal = () => {
           >
             <div className="rounded-md bg-white shadow-xl p-4 space-y-4">
               <div className="flex items-center space-x-2 m-2">
-                <div className="w-8 h-8 bg-blue-500 flex justify-center items-center rounded-full text-white">
+                <div className="w-8 h-8 bg-[#008000] flex justify-center items-center rounded-full text-white">
                   <UserAddIcon className="w-5 h-5 relative" />
                 </div>
                 <h1 className="text-xl font-medium">Share with people</h1>
@@ -181,7 +181,7 @@ const ShareDocumentModal = () => {
                 value={email !== null ? email : ''}
                 onChange={handleShareEmailInputChange}
                 placeholder="Enter email"
-                className="border-b border-blue-500 rounded-t-md p-4 w-full bg-gray-100  font-medium"
+                className="border-b border-[#008000] rounded-t-md p-4 w-full bg-gray-100  font-medium"
               />
               <SharedUsers
                 documentUsers={document.users}
@@ -226,7 +226,7 @@ const ShareDocumentModal = () => {
                   />
                   <button
                     onClick={handleCopyLinkBtnClick}
-                    className="font-semibold text-blue-600 p-2 hover:bg-blue-50 rounded-md"
+                    className="font-semibold text-[#008000] p-2 hover:bg-[#008000] rounded-md"
                   >
                     Copy link
                   </button>

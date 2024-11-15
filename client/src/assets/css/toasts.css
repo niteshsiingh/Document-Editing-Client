@@ -5,7 +5,7 @@
 
 @layer components {
   .toast-primary {
-    @apply border-y border-y-slate-900/10 dark:border-y-slate-300/10 border-r border-r-slate-900/10 dark:border-r-slate-300/10 border-l-6 border-l-blue-600;
+    @apply border-y border-y-slate-900/10 dark:border-y-slate-300/10 border-r border-r-slate-900/10 dark:border-r-slate-300/10 border-l-6 border-l-[#008000];
   }
   .toast-secondary {
     @apply border-y border-y-slate-900/10 dark:border-y-slate-300/10 border-r border-r-slate-900/10 dark:border-r-slate-300/10 border-l-6 border-l-slate-400 dark:border-l-slate-500;

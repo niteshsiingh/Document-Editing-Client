@@ -46,7 +46,7 @@ const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
       key={document.ID}
       className="text-left cursor-pointer"
     >
-      <div className="h-80 w-full border flex flex-col justify-between hover:border-blue-500 rounded">
+      <div className="h-80 w-full border flex flex-col justify-between hover:border-[#008000] rounded">
         <div className="w-full h-full p-4 flex flex-col space-y-2">
           {skeleton}
         </div>
@@ -57,7 +57,7 @@ const DocumentCard = ({ document, setDocuments }: DocumentCardProps) => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8 text-white relative right-2"
-                fill="#3b82f6"
+                fill="#008000"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth="1"

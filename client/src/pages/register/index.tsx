@@ -119,17 +119,20 @@ const Register = () => {
 
   return (
     <div
-      onKeyPress={handleOnKeyPress}
-      className="w-full flex flex-col sm:justify-center items-center p-6 sm:pb-96 bg-gray-100 dark:bg-slate-900 text-primary"
-      style={{ width: widthStr, height: heightStr }}
-    >
-      <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded border-primary shadow-md border dark:border-0 dark:shadow-xl p-6">
-        <div className="flex flex-col space-y-4">
-          <div className="w-full text-center flex flex-col justify-center items-center">
-            <Logo />
-            <h1 className="font-medium text-2xl">Sign up</h1>
-            <p className="font-medium">for a Docs account</p>
-          </div>
+  onKeyPress={handleOnKeyPress}
+  className="min-h-screen w-full flex flex-col justify-center items-center p-6 bg-gray-100 dark:bg-slate-900 text-primary"
+  style={{ width: widthStr, height: heightStr }}
+>
+  <div className="w-full max-w-md transform transition-all duration-200 hover:scale-[1.01]">
+    <div className="bg-white dark:bg-slate-800 rounded-lg border-primary shadow-lg border dark:border-0 dark:shadow-xl p-8">
+      <div className="flex flex-col space-y-6">
+        <div className="w-full text-center flex flex-col justify-center items-center space-y-3">
+          <Logo/>
+          <h1 className="font-semibold text-2xl tracking-tight">Sign up</h1>
+          <p className="font-medium text-gray-600 dark:text-gray-400">for a Docs account</p>
+        </div>
+
+        <div className="space-y-5">
           <TextField
             value={email}
             onInput={handleOnInputEmail}
@@ -155,29 +158,47 @@ const Register = () => {
           />
           <Link
             to="/login"
-            className="text-sm hover:underline font-semibold text-blue-500 text-left"
+            className="text-sm hover:underline font-medium text-[#008000] dark:text-[#008000] inline-block transition-colors duration-200"
           >
             Sign in instead
           </Link>
-          <button
-            onClick={register}
-            disabled={loading}
-            className="bg-blue-600 text-white text-sm font-semibold px-3 py-2 rounded hover:bg-blue-500 flex justify-center items-center space-x-1 active:ring-1"
-          >
-            <span className={`${loading && 'opacity-0'}`}>Register</span>
-            {loading && <Spinner size="sm" />}
-          </button>
         </div>
-      </div>
-      <div className="flex justify-center space-x-4 text-sm p-4">
-        <button className="hover:underline font-semibold text-blue-500">
-          Terms
-        </button>
-        <button className="hover:underline font-semibold text-blue-500">
-          Privacy Policy
+
+        <button
+          onClick={register}
+          disabled={loading}
+          className="w-full bg-[#008000] text-white font-medium px-4 py-3 rounded-lg
+            hover:bg-[#006400] transition-all duration-200 
+            focus:outline-none focus:ring-2 focus:ring-[#008000] focus:ring-offset-2
+            disabled:opacity-50 disabled:cursor-not-allowed
+            transform hover:scale-[1.02]
+            flex justify-center items-center space-x-2"
+        >
+          <span className={`${loading && 'opacity-0'}`}>Register</span>
+          {loading && <Spinner size="sm" />}
         </button>
       </div>
     </div>
+
+    <div className="flex justify-center space-x-6 mt-6">
+      {/* <button className="text-sm font-medium text-[#008000] hover:text-[#006400] 
+        transition-colors duration-200 hover:underline">
+        Terms
+      </button>
+      <button className="text-sm font-medium text-[#008000] hover:text-[#006400]
+        transition-colors duration-200 hover:underline">
+        Privacy Policy
+      </button> */}
+      <button className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+        Terms
+      </button>
+      <button className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
+        Privacy Policy
+      </button>
+
+    </div>
+  </div>
+</div>
   );
 };
 

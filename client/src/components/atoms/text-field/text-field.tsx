@@ -50,7 +50,7 @@ const TextField = ({
           errors.length
             ? 'ring-1 ring-red-500'
             : isFocused
-            ? 'ring-1 ring-blue-600'
+            ? 'ring-1 ring-[#008000]'
             : ''
         } ${
           TEXT_FIELD_CLASSES[color]

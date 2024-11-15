@@ -91,7 +91,7 @@ const Select = ({
         className={`${
           errors.length
             ? 'ring-1 ring-red-500 focus:ring-1 focus:ring-red-500'
-            : 'focus:ring-1 focus:ring-blue-600'
+            : 'focus:ring-1 focus:ring-[#008000]'
         } w-full max-w-full border shadow-sm bg-white dark:bg-slate-800 rounded-md flex justify-between items-center border-primary text-left`}
       >
         <div
@@ -112,7 +112,7 @@ const Select = ({
                 <span
                   onClick={() => selectOption(item)}
                   key={item}
-                  className="px-1 space-x-3 bg-blue-600 text-white rounded multi-select-option flex justify-between items-center"
+                  className="px-1 space-x-3 bg-[#008000] text-white rounded multi-select-option flex justify-between items-center"
                 >
                   <span className="pl-1 multi-select-option">{item}</span>
                   <XIcon className="w-3 multi-select-option" />
@@ -157,7 +157,7 @@ const Select = ({
                     optionIsSelected(option.value)
                       ? `${
                           type === 'multi' && 'cursor-pointer'
-                        } bg-blue-600 text-white`
+                        } bg-[#008000] text-white`
                       : ' cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700'
                   } p-2`}
                 >

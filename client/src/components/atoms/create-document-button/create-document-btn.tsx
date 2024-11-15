@@ -37,7 +37,7 @@ const CreateDocumentButton = () => {
             <button
               disabled={loading}
               onClick={() => handleDocumentCreateBtnClick()}
-              className="h-52 w-40 bg-white border hover:border-blue-500 flex items-center justify-center"
+              className="h-52 w-40 bg-white border hover:border-[#008000] flex items-center justify-center"
             >
               <span className={`${loading && 'opacity-0'}`}>
                 <PlusIcon className="w-16 h-16 text-red-500" />

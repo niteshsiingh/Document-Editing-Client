@@ -83,7 +83,7 @@ const SharedUsers = ({ documentUsers, setDocument }: SharedUsersProps) => {
                 })
               }
               disabled={loading}
-              className="font-semibold text-blue-600 p-2 hover:bg-blue-50 rounded-md"
+              className="font-semibold text-[#008000] p-2 hover:bg-[#008000] rounded-md"
             >
               Remove
             </button>
